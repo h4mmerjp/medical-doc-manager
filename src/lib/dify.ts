@@ -1,4 +1,8 @@
-export async function sendFileToDify(file: File): Promise<any> {
+import { DifyWorkflowResponse } from "@/types";
+
+export async function sendFileToDify(
+  file: File
+): Promise<DifyWorkflowResponse> {
   const formData = new FormData();
   formData.append("file", file);
 
